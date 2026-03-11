@@ -81,6 +81,31 @@ export default function HowItWorks() {
                 }}>Faster than any ERP vendor's SLA</p>
               </div>
             </div>
+
+            {/* Video Placeholder */}
+            <div style={{
+              marginTop: '40px',
+              borderRadius: '12px',
+              overflow: 'hidden',
+              boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+              background: 'var(--bg-card)',
+              border: '1px solid var(--border)',
+              height: '400px',
+              position: 'relative'
+            }}>
+              <video
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                autoPlay
+                muted
+                loop
+                playsInline
+                poster="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+              >
+                {/* Free tech/office video placeholder from open source/Creative Commons source */}
+                <source src="https://videos.pexels.com/video-files/6804128/6804128-uhd_2732_1440_25fps.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
 
           {/* Right — steps */}

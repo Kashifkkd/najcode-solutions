@@ -140,7 +140,7 @@ export default function Hero() {
               {heroContent.cta} <ArrowRight size={16} />
             </a>
             <button
-               className="w-full justify-center sm:w-auto sm:justify-start"
+              className="w-full justify-center sm:w-auto sm:justify-start"
               onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: '10px',

@@ -13,34 +13,15 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 
 function HomeContent() {
-  const searchParams = useSearchParams();
-
-  useEffect(() => {
-    const tab = searchParams.get('tab');
-    if (!tab) return;
-    
-    // Slight delay to ensure DOM layout is complete before calculating scroll position
-    setTimeout(() => {
-      let targetId = tab;
-      if (tab === 'what-we-do') targetId = 'hero';
-      else if (tab === 'industries') targetId = 'services';
-      
-      const element = document.getElementById(targetId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 100);
-  }, [searchParams]);
-
   return (
     <main>
       <div id="hero"><Hero /></div>
       <Stats />
-      <div id="services"><Services /></div>
-      <div id="portfolio"><Portfolio /></div>
+      <div id="industries" className="scroll-mt-24"><Services /></div>
+      <div id="portfolio" className="scroll-mt-24"><Portfolio /></div>
       <HowItWorks />
       <Testimonials />
-      <div id="insights"><FAQ /></div>
+      <div id="insights" className="scroll-mt-24"><FAQ /></div>
     </main>
   );
 }

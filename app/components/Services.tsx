@@ -126,7 +126,7 @@ export default function Services() {
                   background: 'linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.1) 100%)',
                   transition: 'opacity 0.4s ease',
                 }} className="opacity-80 group-hover:opacity-100" />
-                
+
                 {/* Hover Arrow Icon */}
                 <div style={{
                   position: 'absolute', top: '16px', right: '16px',

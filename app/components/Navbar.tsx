@@ -7,16 +7,16 @@ import Link from 'next/link';
 const navItems = [
   {
     label: 'What We Do',
-    href: '/?tab=hero',
+    href: '/#hero',
     children: ['ERP & Enterprise Systems', 'CRM & Sales Automation', 'AI & Business Intelligence', 'Cloud Migration', 'Web & Mobile Apps', 'Consulting'],
   },
   {
     label: 'Industries',
-    href: '/?tab=industries',
+    href: '/#industries',
     children: ['Manufacturing', 'Retail & eCommerce', 'Healthcare', 'Finance & Banking', 'Logistics', 'Education'],
   },
-  { label: 'Our Work', href: '/?tab=portfolio' },
-  { label: 'Insights', href: '/?tab=insights' },
+  { label: 'Our Work', href: '/#portfolio' },
+  { label: 'Insights', href: '/#insights' },
   { label: 'About', href: '/about' },
 ];
 
@@ -47,7 +47,12 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '68px' }}>
           {/* Logo */}
           <a href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', overflow: 'hidden', height: '68px', width: '180px' }}>
-            <img src="/najcode-logo.png" alt="NajCode Solutions" className="" />
+            <img src="/najcode-logo.png" alt="NajCode Solutions" style={{
+              mixBlendMode: isDark ? 'screen' : 'normal',
+              filter: isDark
+                ? 'brightness(0) invert(1)'  // converts entire logo to white
+                : 'none',
+            }} />
           </a>
 
           {/* Desktop Nav */}

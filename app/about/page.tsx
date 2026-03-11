@@ -24,10 +24,10 @@ export default function AboutPage() {
     <>
       <Navbar isDark={isDark} toggleTheme={toggleTheme} />
       <main style={{ paddingTop: '68px', minHeight: '100vh', background: 'var(--bg)' }}>
-        
+
         {/* Header Section */}
-        <section 
-          style={{ 
+        <section
+          style={{
             background: 'linear-gradient(rgba(10, 15, 20, 0.8), rgba(10, 15, 20, 0.85)), url("https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
@@ -37,15 +37,15 @@ export default function AboutPage() {
           }}
         >
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
-            <span style={{ 
-              fontFamily: 'var(--font-dm), sans-serif', fontSize: '0.8rem', fontWeight: 700, 
-              color: 'var(--brand-teal)', letterSpacing: '0.12em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' 
+            <span style={{
+              fontFamily: 'var(--font-dm), sans-serif', fontSize: '0.8rem', fontWeight: 700,
+              color: 'var(--brand-teal)', letterSpacing: '0.12em', textTransform: 'uppercase', display: 'block', marginBottom: '16px'
             }}>
               Our Story
             </span>
-            <h1 style={{ 
-              fontFamily: 'var(--font-fraunces), serif', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 700, 
-              color: 'white', marginBottom: '24px', lineHeight: 1.1 
+            <h1 style={{
+              fontFamily: 'var(--font-fraunces), serif', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 700,
+              color: 'white', marginBottom: '24px', lineHeight: 1.1
             }}>
               Building Perpetually Adaptive <br />
               <span className="gradient-text">Enterprises.</span>
@@ -86,28 +86,28 @@ export default function AboutPage() {
                   transition: 'all 0.3s ease',
                   boxShadow: '0 4px 20px rgba(0,0,0,0.02)'
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-6px)';
-                  e.currentTarget.style.borderColor = 'var(--brand)';
-                  e.currentTarget.style.boxShadow = '0 16px 32px rgba(0,0,0,0.08)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.borderColor = 'var(--border)';
-                  e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.02)';
-                }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-6px)';
+                    e.currentTarget.style.borderColor = 'var(--brand)';
+                    e.currentTarget.style.boxShadow = '0 16px 32px rgba(0,0,0,0.08)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.borderColor = 'var(--border)';
+                    e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.02)';
+                  }}
                 >
                   {/* Subtle top gradient accent */}
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, var(--brand), var(--brand-teal))', opacity: 0.8 }} />
-                  
+
                   <div style={{
                     width: '48px', height: '48px', borderRadius: '12px',
                     background: 'var(--bg-off)', display: 'flex', alignItems: 'center', justifyContent: 'center',
                     marginBottom: '20px', color: 'var(--brand)',
                     transition: 'transform 0.3s ease',
                   }}
-                  onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
-                  onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                    onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
+                    onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                   >
                     <item.icon size={22} />
                   </div>
