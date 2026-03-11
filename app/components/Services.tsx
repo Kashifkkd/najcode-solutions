@@ -7,7 +7,7 @@ const industries = [
   { label: 'Manufacturing', image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600' },
   { label: 'Retail & eCommerce', image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=600' },
   { label: 'Healthcare', image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=600' },
-  { label: 'Finance & Banking', image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a223690?auto=format&fit=crop&q=80&w=600' },
+  { label: 'Finance & Banking', image: 'https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg?auto=compress&cs=tinysrgb&w=600' },
   { label: 'Logistics', image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=600' },
   { label: 'Education', image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=600' },
   { label: 'Energy & Utilities', image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=600' },
@@ -87,7 +87,7 @@ export default function Services() {
                 Cutting-edge solutions across every sector
               </h2>
             </div>
-            <a href="#" style={{
+            <a href="/industries" style={{
               fontFamily: 'var(--font-dm), sans-serif',
               color: 'var(--brand)', fontSize: '0.875rem', fontWeight: 600,
               textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px',
@@ -95,12 +95,18 @@ export default function Services() {
               All industries <ArrowRight size={14} />
             </a>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
+          <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12 pb-4" style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}>
+            {/* Inject a style tag to hide scrollbar for webkit */}
+            <style>{`
+              #industries .flex::-webkit-scrollbar {
+                display: none;
+              }
+            `}</style>
             {industries.map((ind) => (
               <a
                 key={ind.label}
-                href="#"
-                className="group relative h-[240px] rounded-[16px] overflow-hidden shadow-lg border border-black/10 dark:border-white/10"
+                href="/industries"
+                className="group relative h-[240px] rounded-[16px] overflow-hidden shadow-lg border border-black/10 dark:border-white/10 shrink-0 w-[85vw] sm:w-[60vw] md:w-auto snap-center"
                 style={{
                   display: 'flex', alignItems: 'flex-end', textDecoration: 'none',
                   background: 'var(--bg-card)', transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)'
@@ -158,6 +164,12 @@ export default function Services() {
               </a>
             ))}
           </div>
+
+          {/* <div className="mt-8 flex justify-center md:hidden">
+            <a href="/industries" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              View All Industries <ArrowRight size={16} />
+            </a>
+          </div> */}
         </div>
       </section>
 

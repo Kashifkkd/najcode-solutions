@@ -28,7 +28,7 @@ const socials = [
   { icon: Youtube, label: 'YouTube', color: '#ff0000' },
 ];
 
-export default function Footer() {
+export default function Footer({ isDark }: { isDark: boolean }) {
   return (
     <footer style={{ background: 'var(--bg-off)', borderTop: '1px solid var(--border)' }}>
       {/* CTA Banner */}
@@ -92,8 +92,12 @@ export default function Footer() {
           {/* Brand column */}
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px', overflow: 'hidden', height: '54px', width: '180px' }}>
-              <img src="/najcode-logo.png" alt="NajCode Solutions" className="brand-logo" />
-            </div>
+            <img src="/najcode-logo.png" alt="NajCode Solutions" style={{
+              mixBlendMode: isDark ? 'screen' : 'normal',
+              filter: isDark
+                ? 'brightness(0) invert(1)'  // converts entire logo to white
+                : 'none',
+            }} />            </div>
             <p style={{
               fontFamily: 'var(--font-manrope), sans-serif',
               fontSize: '0.85rem', color: 'var(--fg-muted)',

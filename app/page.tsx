@@ -47,7 +47,7 @@ export default function Page() {
       <Suspense fallback={<main style={{ minHeight: '100vh' }} />}>
         <HomeContent />
       </Suspense>
-      <Footer />
+      <Footer isDark={isDark} />
     </>
   );
 }
